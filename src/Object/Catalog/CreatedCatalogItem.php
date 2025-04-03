@@ -17,7 +17,7 @@ class CreatedCatalogItem extends BaseObject
     public ?\DateTimeInterface $updated_at = null;
 
     /**
-     * @throws \DateMalformedStringException
+     * @throws \Exception
      */
     public function fillFromArray(array $params, bool $allowExtraProperties = false): void
     {
