@@ -2,9 +2,11 @@
 
 namespace ImmobiliareLabs\BrazeSDK;
 
+
 use ImmobiliareLabs\BrazeSDK\ClientAdapter\ClientAdapterInterface;
 use ImmobiliareLabs\BrazeSDK\Endpoint\Campaigns;
 use ImmobiliareLabs\BrazeSDK\Endpoint\Canvas;
+use ImmobiliareLabs\BrazeSDK\Endpoint\Catalog;
 use ImmobiliareLabs\BrazeSDK\Endpoint\ContentBlocks;
 use ImmobiliareLabs\BrazeSDK\Endpoint\Email;
 use ImmobiliareLabs\BrazeSDK\Endpoint\EmailTemplates;
@@ -72,6 +74,10 @@ class Braze
     public function contentBlocks(): ContentBlocks
     {
         return $this->endpoint('contentBlocks', ContentBlocks::class);
+    }
+    public function catalog(): Catalog
+    {
+        return $this->endpoint('catalog', Catalog::class);
     }
 
     public function emailTemplates(): EmailTemplates
